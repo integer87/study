@@ -1,4 +1,4 @@
-package com.integer87.case3;
+package com.integer87.case5;
 
 public interface Scale extends Pointer, Display {
     public static final String madeIn = "KOREA";
@@ -16,6 +16,18 @@ public interface Scale extends Pointer, Display {
         if(weight > this.getMaxGram()){
             System.out.println("Bepp~~Bepp~~Bepp~~Bepp~~");
         }
+    }
+
+    // 무게를 초과하지 않는지 체크
+    public static boolean checkUnderWeight(double setting, double weight){
+        boolean result = weight <= setting;
+        saveHistory(setting, weight, result);
+        return result;
+    }
+
+    // 측정결과를 저장
+    private static void saveHistory(double setting, double weight, boolean result){
+        // 측정결과를 저장하는 복잡한 로직들
     }
 
 }

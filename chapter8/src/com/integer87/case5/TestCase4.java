@@ -1,4 +1,4 @@
-package com.integer87.case4;
+package com.integer87.case5;
 
 /**
  * Interface를 구현하고 사용하는 예제

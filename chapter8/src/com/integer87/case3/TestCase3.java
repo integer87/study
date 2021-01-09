@@ -1,16 +1,17 @@
 package com.integer87.case3;
 
 /**
- * Interface Default Method 예제, JAVA 8
+ * Interface를 구현하고 사용하는 예제
  */
 public class TestCase3 {
     public static void main(String[] args) {
-        Scale bathroomScale    = new BathroomScale(70);
-        Scale robervalBalance1 = new RobervalBalance(60, 70);
-        Scale robervalBalance2 = new RobervalBalance(70, 60);
+        Scale smallScale = new SmallScale();
+        Scale largeScale = new LargeScale();
 
-        bathroomScale.printWeight();
-        robervalBalance1.printWeight();
-        robervalBalance2.printWeight();
+        smallScale.putOn(3000);
+        largeScale.putOn(3000);
+
+        smallScale.print();
+        largeScale.print();
     }
 }
