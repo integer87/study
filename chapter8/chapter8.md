@@ -25,7 +25,7 @@ public interface Scale {
 ***
 `implements` 키워드를 사용하여 인터페이스를 구현
 
-아래는 저울(Scale) 인터페이스를 이용하여 소형저울(smallScale) 과 대형저울(LargeScale)을 구현한 예제.
+아래는 저울(Scale) 인터페이스를 이용하여 소형저울(SmallScale) 과 대형저울(LargeScale)을 구현한 예제.
 ```java
 /**
  * 소형저울(최대무게 1kg)
@@ -98,7 +98,7 @@ public class LargeScale implements Scale {
 ***
 인터페이스로 구현한 구현체를 사용할 때는 구현체를 인터페이스 타입으로 인스턴스화 하여 사용 ?
 
-아래 예제는 소형저울(smallScale) 과 대형저울(LargeScale)을 각각 저울(Scale) 인터페이스 타입으로 인스턴스화 시켜
+아래 예제는 소형저울(SmallScale) 과 대형저울(LargeScale)을 각각 저울(Scale) 인터페이스 타입으로 인스턴스화 시켜
 사용하는 예제로 동일한 기능인 `putOn`과 `print`를 사용하지만 실제 동작 결과는 각각 구현된 로직에 따라 동작함
 
 ```java
@@ -127,7 +127,7 @@ LargeScale Weight : 3000.0g
 인터페이스간에 `extends`키워드로 상속이 가능하고, 인터페이스끼리 상속할때는 다중상속도 가능함
 
 아래 기존의 저울(Scale) 인터페이스에, 눈금자(Pointer) 와 출력창(Display)을 상속하고 기존의 인터페이스를 세분화 한 예제  
-기존의 `getWeight` 와 `print` 메소드를 각각 `Pointer`와 `Display`인터페이스로 이동시킴
+기존의 `getWeight 메소드` 와 `print 메소드`를 각각 `Pointer`와 `Display`인터페이스로 이동시킴
 
 ```java
 public interface Pointer {
@@ -153,7 +153,7 @@ public interface Scale extends Pointer, Display {
 ***
 JAVA 8 부터 인터페이스에 `default 메소드`를 정의할 수 있으며, 해당 메소드는 구현부에서 Override 가능
 
-* Why ?  
+* Why created ?  
   * 인터페이스에서 기본적으로 제공되어야 하는 단순기능을 제공해 줄 수 있다.
   * 인터페이스에 새로운 기능이 추가됨에 따른 인터페이스를 구현 모든 클래스의 수정을 피할 수 있다.
 
@@ -235,8 +235,8 @@ public class TestCase4 {
 ### 인터페이스의 private 메소드, 자바 9
 ***
 JAVA 9 부터 인터페이스에 private 메소드를 생성할 수 있다.
-* Why ?
-  * JAVA 8 부터 `default 메소드`와 `static 메소드`가 사용가능해 지면서 인터페이스에 구현부를 작성할 수 있게 되었지만
+* Why created ?
+* JAVA 8 부터 `default 메소드`와 `static 메소드`가 사용가능해 지면서 인터페이스에 구현부를 작성할 수 있게 되었지만
     인터페이스 내부 코드가 복잡해지고, 재사용성이 떨어지는 코드가 발생하게 됨
   * private 메소드를 통해서 이런 문제들을 해결 가능함
 
