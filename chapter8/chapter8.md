@@ -175,8 +175,8 @@ public interface Scale extends Pointer, Display {
   }
 
   // 저울의 최대 측정가능 무게를 초과할 경우 경고음 출력
-  public default void beep() {
-    if(this.getWeight() > this.getMaxGram()){
+  public default void beep(double weight) {
+    if(weight > this.getMaxGram()){
       System.out.println("Bepp~~Bepp~~Bepp~~Bepp~~");
     }
   }
