@@ -236,7 +236,7 @@ public class TestCase4 {
 ***
 JAVA 9 부터 인터페이스에 private 메소드를 생성할 수 있다.
 * Why created ?
-* JAVA 8 부터 `default 메소드`와 `static 메소드`가 사용가능해 지면서 인터페이스에 구현부를 작성할 수 있게 되었지만
+  * JAVA 8 부터 `default 메소드`와 `static 메소드`가 사용가능해 지면서 인터페이스에 구현부를 작성할 수 있게 되었지만
     인터페이스 내부 코드가 복잡해지고, 재사용성이 떨어지는 코드가 발생하게 됨
   * private 메소드를 통해서 이런 문제들을 해결 가능함
 
