@@ -109,6 +109,9 @@ Exception 과 Error 모두 Throwable 클래스를 상속받고 있으며, Excpet
 `Exception`은 프로그램 코드에 의해서 수습될 수 있는 오류를 말하며 (핸들링 가능)  
 `Error`는 프로그램 코드에 의해서 수습될 수  없는 오류를 말한다 (핸들링 불가). 
 
+`Exception`의 대표적인 예로는 `NullPointerException`, `ClassCastException` 등으로 코드 작성시 예외가 예상되어 해당 예외에 대해 오류가 발생했을 때 어떻게 처리할 것인지를 작성하여 오류를 핸들링 가능하다.
+
+`Error`의 대표적인 예로는 `OutOfMemoryError`로 발생했을 시 코드로 핸들링 불가하며, 메모리를 늘리던지, 잘못된 코드(메모리 누수 등)을 찾아 수정해야 한다.
 
 ## RuntimeException과 RE가 아닌 것의 차이는?
 ***
@@ -169,3 +172,4 @@ class NotAException extends Exception {
     }
 }
 ```
+
