@@ -7,6 +7,12 @@ public class Test {
 
     }
 
+
+    @Deprecated
+    public static void a(){
+
+    }
+
     @interface ClassPreamble{
         String group() default "integer87";
         String author();
