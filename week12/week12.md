@@ -39,6 +39,7 @@ public class Test {
 Java SE API에 `애노테이션 세트`가 미리 정의되어 있으며, 일부 애노테이션은 Java 컴파일러에서 사용되고, 일부는 다른 애노테이션에 적용된다. 
 ### Java 언어에서 사용되는 주석유형
 #### @Deprecated
+
 #### @Override
 #### @SuppressWarnings
 #### @SafeVarargs
