@@ -1,3 +1,6 @@
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Repeatable;
+
 public class Test {
     @ClassPreamble( author = "홍길동"
                   , date   = "2021-02-01"
@@ -8,11 +11,12 @@ public class Test {
     }
 
 
-    @Deprecated
+    @FunctionalInterface
     public static void a(){
 
     }
 
+    @Repeatable
     @interface ClassPreamble{
         String group() default "integer87";
         String author();
@@ -20,4 +24,12 @@ public class Test {
         int revision() default 1;
         String[] member();
     }
+
+
+
+
+}
+
+class Car {
+    private String name;
 }
